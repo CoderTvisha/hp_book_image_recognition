@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sono:wght@300&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <title>Image Recognition</title>
+</head>
+<body>
+    <div class="container">
+    
+        <center>
+        
+    <h1 style="font-family:'Sono', sans-serif;"> Image Recognition (Harry Potter Books Edition)</h1>
+          <br><br>
+    
+          <p style="font-size: 22px; color:#4F091D; font-family:'Sono', sans-serif;">Model is trained to identify the following objects: </p>
+    <p style=" font-size: 20px; color:#781D42; font-family: 'Sono', sans-serif;">
+      HP and the Chamber of Secrets
+      <br><br>
+      HP and the Prisioner of Azkaban
+      <br><br>
+      HP and the Goblet of Fire
+      <br><br>
+      HP and the Order of Pheonix
+      <br><br>
+      HP and the Half Blood Prince
+    </p><hr>
+          <label style="font-size: 22px; color:#4F091D; font-family: 'Sono', sans-serif;" >Webcam View - </label>
+    <div id="camera"> </div><br><br>
+    
+    <div id="result"> </div><br><br>
+          
+    <input style=" background-color: #A3423C; color: white; font-family: 'Sono', sans-serif;" type="button" onclick="take_snapshot()" id="take_snapshot_bttn" value="Take Snapshot" class="btn"><br><br>
+    <input style=" background-color: #A3423C; color: white; font-family: 'Sono', sans-serif;" type="button" onclick="check()" id="check_bttn" value="Check" class="btn"><br><br>
+    
+          <p style="font-size: 22px; width:50%; background-color:#222F5B;  color: white; font-family: 'Sono', sans-serif; font-weight: bold;">Your Book Name : <span id="result_object"></span>  </p>
+          <p style="font-size: 22px;  width: 50%; background-color:#222F5B; color: white; font-family: 'Sono', sans-serif; font-weight: bold;">Accuracy : <span id="accuracy_object"> </span> </p>
+        </center>
+    
+      </div>
+    <script src="main.js"></script>
+    
+     
+</body>
+</html>
